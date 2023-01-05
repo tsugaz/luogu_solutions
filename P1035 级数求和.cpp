@@ -1,15 +1,18 @@
 #include <iostream>
-using namespace std;
 
-int main(){
+int main() {
 	int a;
 	double s;
 	s = 0;
-	cin>>a;
-	for(double b = 1; ;b++){
+
+	std::cin >> a;
+
+	for(double b = 1; ; b++) {
+
 		s+=1/b;
-		if(s>a){
-			cout<<(int)b;
+
+		if(s>a) {
+			std::cout << (int)b;
 			return 0;
 		}
 	}
