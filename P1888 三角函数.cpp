@@ -1,19 +1,21 @@
 #include <iostream>
-using namespace std;
 
-int gcd(int a, int b){
-	if(a%b==0){
+
+int gcd(int a, int b) {
+	if((a % b) == 0){
 		return b;
 	}
-	return gcd(b, a%b);
+	return gcd(b, (a % b));
 }
 
-int main(){
+int main() {
 	int a, b, c, d, e, f;
-	cin>>a>>b>>c;
-	d = min(min(a, b), c);
-	e = max(max(a, b), c);
+	std::cin >> a >> b >> c;
+
+	d = std::min(std::min(a, b), c);
+	e = std::max(std::max(a, b), c);
 	f = gcd(d, e);
-	cout<<d/f<<"/"<<e/f<<endl;
+	
+	std::cout << (d / f) <<"/" <<(e / f) << std::endl;
 	return 0;
 }

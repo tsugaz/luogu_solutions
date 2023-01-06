@@ -1,18 +1,17 @@
 #include <iostream>
-using namespace std;
 
-int main(){
+int main() {
 	double m, h, bmi;
-	cin>>m>>h;
-	bmi = m/(h*h);
-	if(bmi<18.5){
-		cout<<"Underweight"<<endl;
+	std::cin >> m >> h;
+	bmi = m / (h * h);
+	if(bmi < 18.5) {
+		std::cout << "Underweight" << std::endl;
 	}
-	else if(bmi>=18.5&&bmi<24){
-		cout<<"Normal"<<endl;
+	else if((bmi >= 18.5) && (bmi < 24)) {
+		std::cout << "Normal" << std::endl;
 	} 
 	else{
-		cout<<bmi<<endl<<"Overweight"<<endl;
+		std::cout << bmi << std::endl << "Overweight" << std::endl;
 	}
 	return 0;
 }
